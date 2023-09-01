@@ -1,0 +1,76 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: 24rem;
+  margin: auto;
+  font-family: "Roboto Mono", monospace;
+  color: #3c3c3c;
+}
+
+hr {
+  width: 100%;
+  /* margin-top: 2rem;
+  margin-bottom: 2rem; */
+}
+
+.container {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.row {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+}
+
+input {
+  height: 3rem;
+  width: 3rem;
+  margin: 0.5rem;
+  font-family: "Roboto Mono", monospace;
+  color: #3c3c3c;
+  font-size: 2.2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: center;
+  border: 0.25rem solid lightgrey;
+}
+
+.loading {
+  margin-bottom: 2rem;
+  animation: spin 1.5s linear infinite;
+}
+
+.loading::after {
+  content: "😃";
+  font-size: 2.5rem;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.correct {
+  color: white;
+  background: green;
+}
+
+.partially-correct {
+  background: orange;
+}
+
+.incorrect {
+  color: white;
+  background: grey;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
